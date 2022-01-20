@@ -17,8 +17,8 @@ jobs:
           hidden="&hide=HTML,CSS,Makefile"
           wget "$rawquery$hidden" -O default.svg
           wget "$rawquery$hidden&theme=github_dark" -O github_dark.svg
-          git config user.name noahreinalter
-          git config user.email 38698485+noahreinalter@users.noreply.github.com
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
           git add .
           today=$(date +'%-d.%-m.%Y')
           git diff-index --quiet HEAD || (git commit -m "Language Stats ${today}" && git push)
